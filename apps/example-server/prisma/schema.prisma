@@ -12,3 +12,10 @@ model Example {
   id        String   @id @default(cuid())
   updatedAt DateTime @updatedAt
 }
+
+model Document {
+  createdAt DateTime @default(now())
+  file      Json?
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}

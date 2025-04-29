@@ -9,6 +9,10 @@ import { ExampleList } from "./example/ExampleList";
 import { ExampleCreate } from "./example/ExampleCreate";
 import { ExampleEdit } from "./example/ExampleEdit";
 import { ExampleShow } from "./example/ExampleShow";
+import { DocumentList } from "./document/DocumentList";
+import { DocumentCreate } from "./document/DocumentCreate";
+import { DocumentEdit } from "./document/DocumentEdit";
+import { DocumentShow } from "./document/DocumentShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -28,6 +32,13 @@ const App = (): React.ReactElement => {
           edit={ExampleEdit}
           create={ExampleCreate}
           show={ExampleShow}
+        />
+        <Resource
+          name="Document"
+          list={DocumentList}
+          edit={DocumentEdit}
+          create={DocumentCreate}
+          show={DocumentShow}
         />
       </Admin>
     </div>
